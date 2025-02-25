@@ -1,0 +1,22 @@
+:root {
+  --black: #1d2833;
+  --light-caramel: #e9c590;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black);
+  color: var(--light-caramel);
+
+  border: 1px solid red;
+  padding: 10px;
+}
+.nav-items ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+ul li a {
+  color: var(--light-caramel);
+}
