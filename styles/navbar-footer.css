@@ -8,8 +8,6 @@
   align-items: center;
   background-color: var(--black);
   color: var(--light-caramel);
-
-  border: 1px solid red;
   padding: 10px;
 }
 .nav-items ul {
@@ -19,4 +17,7 @@
 }
 ul li a {
   color: var(--light-caramel);
+}
+.logo img {
+  height: 20px;
 }
