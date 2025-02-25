@@ -21,3 +21,12 @@ ul li a {
 .logo img {
   height: 20px;
 }
+/* footer */
+.footer-container {
+  background-color: var(--black);
+  color: var(--light-caramel);
+}
+.restaurants-info {
+  display: flex;
+  gap: 1rem;
+}
