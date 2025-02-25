@@ -1,0 +1,29 @@
+:root {
+  --black: #1d2833;
+  --light-caramel: #e9c590;
+}
+.hero-section {
+  background-color: var(--black);
+  color: var(--light-caramel);
+  width: 100%;
+  height: 600px;
+  display: flex;
+}
+.hero-text {
+  height: 100%;
+  border: 1px solid red;
+  width: 49%;
+}
+.hero-animation {
+  height: 100%;
+  border: 1px solid yellow;
+  width: 49%;
+}
+.best-sellers {
+  display: flex;
+  gap: 10px;
+}
+.best-seller__card {
+  width: 300px;
+  border: 1px solid pink;
+}
