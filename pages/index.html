@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles/general-styles.css" />
     <link rel="stylesheet" href="/styles/navbar-footer.css" />
     <link rel="stylesheet" href="/styles/landing-page.css" />
+    <link rel="stylesheet" href="/styles/animations.css" />
   </head>
   <nav class="navbar">
     <div class="logo">
@@ -24,8 +25,25 @@
   <main>
     <section>
       <div class="hero-section">
-        <div class="hero-text">the pizza spot</div>
-        <div class="hero-animation">some animation</div>
+        <div class="hero-text">
+          <h1 id="pizza-spot-heading">
+            <span>The</span> <span>pizza</span> <span>spot</span>
+          </h1>
+        </div>
+        <div class="hero__animation">
+          <div class="hero__animation-wrapper">
+            <img
+              src="/images/illustrations/hero_animation-pizza-board.png"
+              aria-hidden="true"
+              id="pizza-board"
+            />
+            <img
+              src="/images/illustrations/hero_animation-pizza.png"
+              aria-hidden="true"
+              id="sliding-pizza"
+            />
+          </div>
+        </div>
       </div>
     </section>
     <section>
