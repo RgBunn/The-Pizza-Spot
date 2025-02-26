@@ -1,0 +1,23 @@
+body {
+  min-height: 100vh;
+  position: relative;
+}
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid blue;
+}
+.cart__item-product {
+  display: flex;
+  gap: 20px;
+}
+.cart__item img {
+  height: 50px;
+}
+/* attaching footer to the bottom of the page */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
