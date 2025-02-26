@@ -1,0 +1,14 @@
+.menu__collection {
+  display: flex;
+  gap: 1rem;
+}
+.menu-item {
+  border: 1px solid orange;
+  width: 300px;
+}
+.menu-item__image img {
+  height: 200px;
+}
+.menu-item__description {
+  padding: 10px;
+}
