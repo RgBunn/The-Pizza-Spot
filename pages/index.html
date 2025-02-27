@@ -3,72 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The Pizza Spot</title>
     <link rel="stylesheet" href="/styles/general-styles.css" />
     <link rel="stylesheet" href="/styles/navbar-footer.css" />
     <link rel="stylesheet" href="/styles/landing-page.css" />
     <link rel="stylesheet" href="/styles/animations.css" />
   </head>
-  <nav class="navbar">
-    <div class="logo">
-      pizza
-      <img src="/images/illustrations/pizza-logo.png" aria-hidden="true" />
-    </div>
-    <div class="nav-items">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="/pages/menu.html">Menu</a></li>
-        <li><a href="/pages/cart.html">Cart</a></li>
-      </ul>
-    </div>
-  </nav>
-  <main>
-    <section>
-      <div class="hero-section">
-        <div class="hero-text">
-          <h1 id="pizza-spot-heading">
-            <span>The</span> <span>pizza</span> <span>spot</span>
-          </h1>
-        </div>
-        <div class="hero__animation">
-          <div class="hero__animation-wrapper">
-            <img
-              src="/images/illustrations/hero_animation-pizza-board.png"
-              aria-hidden="true"
-              id="pizza-board"
-            />
-            <img
-              src="/images/illustrations/hero_animation-pizza.png"
-              aria-hidden="true"
-              id="sliding-pizza"
-            />
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        The Pizza Spot
+        <img src="/images/illustrations/pizza-logo.png" aria-hidden="true" />
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="/pages/menu.html">Menu</a></li>
+          <li>
+            <a href="../pages/cart.html"
+              ><img
+                src="../images/icons/shopping-cart.png"
+                aria-hidden="true"
+                class="nav__icon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section>
+        <div class="hero-section">
+          <div class="hero-text">
+            <h1 id="pizza-spot-heading">
+              <span>The</span> <span>pizza</span> <span>spot</span>
+            </h1>
+          </div>
+          <div class="hero__animation">
+            <div class="hero__animation-wrapper">
+              <img
+                src="/images/illustrations/hero_animation-pizza-board.png"
+                aria-hidden="true"
+                id="pizza-board"
+              />
+              <img
+                src="/images/illustrations/hero_animation-pizza.png"
+                aria-hidden="true"
+                id="sliding-pizza"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="introduction">
-        <div class="introduction__image">introduction__image</div>
-        <div class="introduction__text">
-          <h2>Welcome to The Pizza Spot – Your Pizza, Your Way!</h2>
-          <p>
-            experience. That’s why we’ve crafted the perfect combination of
-            fresh ingredients, delicious flavors, and fast delivery to bring you
-            the best pizza right to your door.
-          </p>
-          <p>
-            Whether you’re craving a classic Margherita or want to try something
-            bold and unique, our menu has something for everyone. And with our
-            lightning-fast delivery service, your pizza will always arrive hot
-            and fresh—just the way it should be
-          </p>
+      </section>
+      <section>
+        <div class="introduction">
+          <!-- <div class="introduction__image"></div> -->
+          <div class="introduction__text">
+            <h2 class="section-heading">
+              Welcome to The Pizza Spot – Where Every Slice is Crafted to
+              Perfection!
+            </h2>
+            <p>
+              At The Pizza Spot, we believe that pizza is more than just food,
+              it’s an experience. That’s why we bring together the freshest
+              ingredients, bold flavors, and lightning-fast delivery to serve
+              you the best pizza, right to your door.
+            </p>
+            <a href="../pages/menu.html" class="btn btn-light"
+              >Check Our Menu</a
+            >
+          </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <h2>Check out our best sellers</h2>
-      <div class="best-sellers">
-        <div class="best-seller__card">
+      </section>
+      <section>
+        <h2 class="section-heading">Check out our best sellers</h2>
+        <div id="best-sellers">
+          <!-- <div class="best-seller__card">
+            <div class="best-seller__product-image">img</div>
+            div.best-seller__text-content
           <h3>Chicken BBQ</h3>
           <p>
             A flavor-packed favorite! Tender grilled chicken, crispy bacon, and
@@ -77,72 +88,128 @@
           </p>
           <button>Order now</button>
         </div>
-        <div class="best-seller__card">
-          <h3>Pepperoni Pizza</h3>
-          <p>
-            The classic favorite, done right. Generous slices of savory, zesty
-            pepperoni on a perfectly crispy crust, topped with gooey melted
-            cheese and a rich tomato sauce.
-          </p>
-          <button>Order now</button>
+         -->
         </div>
-        <div class="best-seller__card">
-          <h3>Veggie Supreme Pizza</h3>
-          <p>
-            A fresh and vibrant choice for veggie lovers! Loaded with a colorful
-            mix of bell peppers, onions, mushrooms, olives, and tomatoes, all
-            atop a layer of melted cheese and savory tomato sauce.
-          </p>
-          <button>Order now</button>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="process">
+      </section>
+      <section>
         <h2>How It Works?</h2>
-        1. Browse Our Menu”, “2. Choose Your Pizza”, “3. Checkout and Get It
-        Delivered”
-      </div>
-    </section>
-    <section>
-      <h2>Why Choose Us?</h2>
-      <ul>
-        <li>Fast Delivery</li>
-        <li>Fresh Ingredients</li>
-        <li>Family Recipes</li>
-        <li>Customizable Pizzas</li>
-      </ul>
-    </section>
-    <section>
-      <div class="cta__container">
-        <h3>“Get Your Pizza Delivered”</h3>
-        <button>Order Now</button>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="footer-container">
-      <div class="restaurants-info">
-        <div class="contacts">
-          <p>address: 123 Some Random Street</p>
-          <p>phone: 123-456-789</p>
-          <p>email: thepizzaspot@delicious.com</p>
+        <div class="process">
+          <div class="process__block">
+            <div class="process__block-text"><h4>1. Browse Our Menu</h4></div>
+            <div class="process__block-illustration">
+              <img
+                src="/images/illustrations/illustration_browse.jpg"
+                aria-hidden="true"
+              />
+            </div>
+          </div>
+          <div class="process__block">
+            <div class="process__block-text"><h4>2. Choose Your Pizza</h4></div>
+            <div class="process__block-illustration">
+              <img
+                src="/images/illustrations/illustration_choose.jpg"
+                aria-hidden="true"
+              />
+            </div>
+          </div>
+          <div class="process__block">
+            <div class="process__block-text">
+              <h4>3. Get It Delivered</h4>
+            </div>
+            <div class="process__block-illustration">
+              <img
+                src="/images/illustrations/illustration_delivered.jpg"
+                aria-hidden="true"
+              />
+            </div>
+          </div>
         </div>
-        <div class="business-hours">
-          <ul>
-            <li>Tuesday-Thursday: 11:00-22:00</li>
-            <li>Friday-Sunday: 11:30-00:00</li>
-            <li>Monday: closed</li>
+      </section>
+      <section>
+        <h2>Why Choose Us?</h2>
+        <div class="why-us__container">
+          <ul class="why-us">
+            <li>
+              <span
+                ><img
+                  src="../images/icons/pizza-delivery.png"
+                  aria-hidden="true" /></span
+              >Fast Delivery
+            </li>
+            <li>
+              <span
+                ><img
+                  src="../images/icons/ingredient.png"
+                  aria-hidden="true" /></span
+              >Fresh Ingredients
+            </li>
+            <li>
+              <span
+                ><img
+                  src="../images/icons/cook-book.png"
+                  aria-hidden="true" /></span
+              >Family Recipes
+            </li>
+            <li>
+              <span
+                ><img
+                  src="../images/icons/funding.png"
+                  aria-hidden="true" /></span
+              >Deliciously Affordable
+            </li>
           </ul>
         </div>
+      </section>
+      <section>
+        <div class="cta__container">
+          <h3 class="section-heading">“Get Your Pizza Delivered”</h3>
+          <button class="btn btn-dark">Order Now</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="restaurants-info">
+          <div class="contacts">
+            <p>
+              <img
+                src="../images/icons/location.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              123 Some Random Street
+            </p>
+            <p>
+              <img
+                src="../images/icons/telephone.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              123-456-789
+            </p>
+            <p>
+              <img
+                src="../images/icons/email.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              thepizzaspot@delicious.com
+            </p>
+          </div>
+          <div class="business-hours">
+            <ul>
+              <li>Tuesday-Thursday: 11:00-22:00</li>
+              <li>Friday-Sunday: 11:30-00:00</li>
+              <li>Monday: closed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyrights">
+          <h3>© 2025 The Pizza Spot. All Rights Reserved.</h3>
+        </div>
       </div>
-      <div class="copyrights">
-        <h3>© 2025 The Pizza Spot. All Rights Reserved.</h3>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <body>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>
