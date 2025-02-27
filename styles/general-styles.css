@@ -6,9 +6,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: hsla(33, 100%, 88%, 0.5);
+}
 li {
   list-style-type: none;
 }
 a {
   text-decoration: none;
+}
+/* styling headings */
+.section-heading {
+  text-align: center;
+}
+
+/* styling buttons */
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+}
+.btn-dark {
+  background-color: var(--black);
+  color: var(--light-caramel);
+}
+.btn-light {
+  background: linear-gradient(to bottom right, #f8f1e5, #f7d1a3);
+  color: black;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 20px;
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../admin/admin.css" />
+  </head>
+  <body>
+    <script src="../admin/admin.js"></script>
+    <div class="wrapper">
+        <header>
+            <div>logo</div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about/about.html">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <main>
+            <button id="add-container">Add Item</button>
+            <button id="update-container">Edit Item</button>
+            <button id="delete-container">Delete Item</button>
+            <div class="menu-item">
+
+                <div class="add-pizza">
+                    <form id="create-form" style="display: flex; flex-direction: column;width: 300px; gap: 5px;">
+                        <select name="" id=""></select>
+                        <input type="text" id="name" placeholder="Name" required />
+                        <input type="number" id="price" placeholder="Price" required />
+                        <input type="text" id="img" placeholder="Image URL" required />
+                        <textarea id="description" placeholder="Description" required></textarea>
+                        <button id="add" type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="update-pizza">
+                    <div>
+                        <h3>Редактирование пиццы</h3>
+                    </div>
+                </div>
+                <div class="delete-pizza">delete</div>
+
+  </body>
+</html>
