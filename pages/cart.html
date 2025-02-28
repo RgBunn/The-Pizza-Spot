@@ -28,7 +28,9 @@
                   src="../images/icons/shopping-cart.png"
                   aria-hidden="true"
                   class="nav__icon"
-              /></a>
+                />
+                <span class="cart-count"></span>
+              </a>
             </li>
           </ul>
         </div>
@@ -39,20 +41,17 @@
         <h1>Youre only few steps away</h1>
       </section>
       <section>
-        <div class="cart__wrapper">
-          <div class="cart-item">
+        <div class="cart__container">
+          <!-- <div class="cart-item">
             <span class="cart-item__name">Product Name</span>
             <div class="cart-item__quantity">
-              <button class="cart-item__button cart-item__button--minus">
+              <button class="cart-item__button--minus" id="remove-items">
                 -
               </button>
-              <span class="cart-item__amount">1</span>
-              <!-- Current amount -->
-              <button class="cart-item__button cart-item__button--plus">
-                +
-              </button>
+              <span class="cart-item__amount" id="items-amount">1</span>
+              <button class="cart-item__button--plus" id="add-items">+</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
       <section>
@@ -64,7 +63,7 @@
           <hr />
           <div class="total">
             <p>Total</p>
-            <span>$0.00</span>
+            <span id="total-amount">$0.00</span>
           </div>
         </div>
       </section>
@@ -120,5 +119,6 @@
       </div>
     </footer>
     <!-- </div> -->
+    <script src="../cart.js"></script>
   </body>
 </html>
