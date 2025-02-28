@@ -92,28 +92,52 @@ window.onload = async () => {
     .then((menuItems) => {
       const menuItemsArray = Object.values(menuItems);
       menuItemsArray.forEach((menuItem) => {
-        const menuItemCard = document.createElement("div");
-        menuItemCard.classList.add("menu-item");
+        const menuItemCardContainer = document.createElement("div");
+        menuItemCardContainer.classList.add("menu-item");
+
+        const imageCardContainer = document.createElement("div");
+        imageCardContainer.classList.add("menu-item__img-container");
+        const descriptionCardContainer = document.createElement("div");
+        descriptionCardContainer.classList.add("menu-item__description");
+        menuItemCardContainer.append(
+          imageCardContainer,
+          descriptionCardContainer
+        );
+        const menuItemDetailsContainer = document.createElement("div");
+        menuItemDetailsContainer.classList.add("menu-item__details");
+        const menuItemPriceBtnContainer = document.createElement("div");
+        menuItemPriceBtnContainer.classList.add("menu-item__price-button");
+        descriptionCardContainer.append(
+          menuItemDetailsContainer,
+          menuItemPriceBtnContainer
+        );
 
         const itemName = document.createElement("h3");
         itemName.textContent = menuItem.name;
-        menuItemCard.appendChild(itemName);
 
         const itemDescription = document.createElement("p");
         itemDescription.textContent = menuItem.description;
-        menuItemCard.appendChild(itemDescription);
+        menuItemDetailsContainer.append(itemName, itemDescription);
+        // menuItemDetails.appendChild(itemName, itemDescription);
+        // // descriptionCard.appendChild(itemDescription);
 
         const itemPrice = document.createElement("span");
         itemPrice.textContent = `$${menuItem.price}`;
-        menuItemCard.appendChild(itemPrice);
+        const addToCartBtn = document.createElement("button");
+        addToCartBtn.classList.add("btn", "btn-dark");
+        addToCartBtn.textContent = "Add to cart";
+        // descriptionCard.appendChild(itemPrice);
+        menuItemPriceBtnContainer.append(itemPrice, addToCartBtn);
 
         const itemImage = document.createElement("img");
         itemImage.src = menuItem.img;
         itemImage.alt = `${menuItem.name} image`;
-        menuItemCard.appendChild(itemImage);
+        imageCardContainer.appendChild(itemImage);
 
-        menuCollectionPizza.appendChild(menuItemCard);
+        menuCollectionPizza.appendChild(menuItemCardContainer);
       });
     })
     .catch((error) => console.error(error));
 };
+// /////////////////
+// cart manipulation

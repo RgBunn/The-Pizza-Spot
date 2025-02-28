@@ -4,152 +4,190 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/general-styles.css" />
-    <link rel="stylesheet" href="/styles/navbar-footer.css" />
-    <link rel="stylesheet" href="/styles/menu-styles.css" />
+    <link rel="stylesheet" href="../styles/general-styles.css" />
+    <link rel="stylesheet" href="../styles/navbar-footer.css" />
+    <link rel="stylesheet" href="../styles/menu-styles.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo">pizza logo</div>
-      <div class="nav-items">
-        <ul>
-          <li><a href="/pages/index.html">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="/pages/cart.html">Cart</a></li>
-        </ul>
-      </div>
-    </nav>
-    <main>
-      <section>
-        <div class="menu-section__hero">
-          <h1>Explore Our Delicious Menu</h1>
-          <p>Handmade pizzas, freshly baked, just for you.</p>
-        </div>
-      </section>
-      <hr />
-      <section>
-        <h2>Pizzas</h2>
-        <div class="menu__collection-pizzas"></div>
-      </section>
-      <hr />
-      <section>
-        <h2>Specialty Pizzas</h2>
+    <div class="menu-wrapper">
+      <header>
+        <nav class="navbar">
+          <div class="logo">
+            The Pizza Spot
+            <img
+              src="../images/illustrations/pizza-logo.png"
+              aria-hidden="true"
+            />
+          </div>
+          <div class="nav-items">
+            <ul>
+              <li><a href="../pages/index.html">Home</a></li>
+              <li><a href="#">Menu</a></li>
+              <li>
+                <a href="../pages/cart.html"
+                  ><img
+                    src="../images/icons/shopping-cart.png"
+                    aria-hidden="true"
+                    class="nav__icon"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <div class="menu-section__hero">
+            <h1>Explore Our Delicious Menu</h1>
+            <p>Handmade pizzas, freshly baked, just for you.</p>
+          </div>
+        </section>
+        <hr />
+        <section>
+          <h2>Pizzas</h2>
+          <div class="menu__collection menu__collection-pizzas"></div>
+        </section>
+        <hr />
+        <!--
+        <section>
+          <h2>Specialty Pizzas</h2> -->
         <!-- <div class="menu__collection">
-          <div class="menu-item">
-            <div class="menu-item__image">
-              <img src="/images/mozzarella-pizza.jpg" alt="" />
-            </div>
-            <div class="menu-item__description">
-              <div class="name-price">
-                <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+            <div class="menu-item">
+              <div class="menu-item__image">
+                <img src="/images/mozzarella-pizza.jpg" alt="" />
               </div>
-              <hr />
-              <p>
-                A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
-                olive oil, and a sprinkle of parmesan.
-              </p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item__image">
-              <img src="/images/mozzarella-pizza.jpg" alt="" />
-            </div>
-            <div class="menu-item__description">
-              <div class="name-price">
-                <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+              <div class="menu-item__description">
+                <div class="name-price">
+                  <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+                </div>
+                <hr />
+                <p>
+                  A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
+                  olive oil, and a sprinkle of parmesan.
+                </p>
               </div>
-              <hr />
-              <p>
-                A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
-                olive oil, and a sprinkle of parmesan.
-              </p>
             </div>
-          </div>
-        </div> -->
-      </section>
-      <hr />
-
-      <hr />
-      <section>
-        <h2>Sides & Appetizers</h2>
+            <div class="menu-item">
+              <div class="menu-item__image">
+                <img src="/images/mozzarella-pizza.jpg" alt="" />
+              </div>
+              <div class="menu-item__description">
+                <div class="name-price">
+                  <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+                </div>
+                <hr />
+                <p>
+                  A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
+                  olive oil, and a sprinkle of parmesan.
+                </p>
+              </div>
+            </div>
+          </div> -->
+        <!-- </section>
+        <hr />
+        <hr />
+        <section> -->
+        <!-- <h2>Sides & Appetizers</h2> -->
         <!-- <div class="menu__collection">
-          <div class="menu-item">
-            <div class="menu-item__image">
-              <img src="/images/mozzarella-pizza.jpg" alt="" />
-            </div>
-            <div class="menu-item__description">
-              <div class="name-price">
-                <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+            <div class="menu-item">
+              <div class="menu-item__image">
+                <img src="/images/mozzarella-pizza.jpg" alt="" />
               </div>
-              <hr />
-              <p>
-                A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
-                olive oil, and a sprinkle of parmesan.
-              </p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item__image">
-              <img src="/images/mozzarella-pizza.jpg" alt="" />
-            </div>
-            <div class="menu-item__description">
-              <div class="name-price">
-                <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+              <div class="menu-item__description">
+                <div class="name-price">
+                  <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+                </div>
+                <hr />
+                <p>
+                  A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
+                  olive oil, and a sprinkle of parmesan.
+                </p>
               </div>
-              <hr />
-              <p>
-                A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
-                olive oil, and a sprinkle of parmesan.
-              </p>
             </div>
-          </div>
-        </div> -->
-      </section>
-      <hr />
-      <section>
-        <h2>Beverages</h2>
+            <div class="menu-item">
+              <div class="menu-item__image">
+                <img src="/images/mozzarella-pizza.jpg" alt="" />
+              </div>
+              <div class="menu-item__description">
+                <div class="name-price">
+                  <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+                </div>
+                <hr />
+                <p>
+                  A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
+                  olive oil, and a sprinkle of parmesan.
+                </p>
+              </div>
+            </div>
+          </div> -->
+        <!-- </section>
+        <hr />
+        <section>
+          <h2>Beverages</h2> -->
         <!-- <div class="menu__collection">
-          <div class="menu-item">
-            <div class="menu-item__image">
-              <img src="/images/mozzarella-pizza.jpg" alt="" />
-            </div>
-            <div class="menu-item__description">
-              <div class="name-price">
-                <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+            <div class="menu-item">
+              <div class="menu-item__image">
+                <img src="/images/mozzarella-pizza.jpg" alt="" />
               </div>
-              <hr />
-              <p>
-                A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
-                olive oil, and a sprinkle of parmesan.
-              </p>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item__image">
-              <img src="/images/mozzarella-pizza.jpg" alt="" />
-            </div>
-            <div class="menu-item__description">
-              <div class="name-price">
-                <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+              <div class="menu-item__description">
+                <div class="name-price">
+                  <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+                </div>
+                <hr />
+                <p>
+                  A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
+                  olive oil, and a sprinkle of parmesan.
+                </p>
               </div>
-              <hr />
-              <p>
-                A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
-                olive oil, and a sprinkle of parmesan.
-              </p>
             </div>
-          </div>
-        </div> -->
-      </section>
-      <hr />
-    </main>
+            <div class="menu-item">
+              <div class="menu-item__image">
+                <img src="/images/mozzarella-pizza.jpg" alt="" />
+              </div>
+              <div class="menu-item__description">
+                <div class="name-price">
+                  <h3><span class="price">13$</span>Mozzarella-pizza</h3>
+                </div>
+                <hr />
+                <p>
+                  A mozzarella pizza with tomato sauce, fresh mozzarella, basil,
+                  olive oil, and a sprinkle of parmesan.
+                </p>
+              </div>
+            </div>
+          </div> -->
+        <!-- </section>
+        <hr />-->
+      </main>
+    </div>
     <footer>
       <div class="footer-container">
         <div class="restaurants-info">
           <div class="contacts">
-            <p>address: 123 Some Random Street</p>
-            <p>phone: 123-456-789</p>
-            <p>email: thepizzaspot@delicious.com</p>
+            <p>
+              <img
+                src="../images/icons/location.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              123 Some Random Street
+            </p>
+            <p>
+              <img
+                src="../images/icons/telephone.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              123-456-789
+            </p>
+            <p>
+              <img
+                src="../images/icons/email.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              thepizzaspot@delicious.com
+            </p>
           </div>
           <div class="business-hours">
             <ul>
