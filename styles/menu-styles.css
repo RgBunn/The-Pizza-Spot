@@ -5,6 +5,7 @@
 .menu-item {
   border: 1px solid orange;
   width: 300px;
+  height: 300px;
 }
 .menu-item__image img {
   height: 200px;

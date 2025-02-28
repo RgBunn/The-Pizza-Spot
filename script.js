@@ -65,14 +65,7 @@ pizzasBestSeller.forEach((pizza) => {
   bestSellerCartBtn.classList.add("btn", "btn-dark");
 
   bestSellerItem.append(bestSellerImageContainer, bestSellerTextContent);
-  //   bestSellerItem.append(
-  //     bestSellerImageContainer,
-  //     bestSellerImage,
-  //     bestSellerName,
-  //     bestSellerDescription,
-  //     bestSellerPrice,
-  //     bestSellerCartBtn
-  //   );
+
   bestSellerTextContent.append(
     bestSellerName,
     bestSellerDescription,
@@ -81,5 +74,46 @@ pizzasBestSeller.forEach((pizza) => {
   );
   bestSellerImageContainer.appendChild(bestSellerImage);
 
-  bestSellerSection.appendChild(bestSellerItem);
+  // bestSellerSection.appendChild(bestSellerItem);
 });
+
+// menu
+const API_URL = "https://test-fire-d4ef1-default-rtdb.firebaseio.com";
+const menuCollectionPizza = document.querySelector(".menu__collection-pizzas");
+
+window.onload = async () => {
+  fetch(`${API_URL}/menu.json`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((menuItems) => {
+      const menuItemsArray = Object.values(menuItems);
+      menuItemsArray.forEach((menuItem) => {
+        const menuItemCard = document.createElement("div");
+        menuItemCard.classList.add("menu-item");
+
+        const itemName = document.createElement("h3");
+        itemName.textContent = menuItem.name;
+        menuItemCard.appendChild(itemName);
+
+        const itemDescription = document.createElement("p");
+        itemDescription.textContent = menuItem.description;
+        menuItemCard.appendChild(itemDescription);
+
+        const itemPrice = document.createElement("span");
+        itemPrice.textContent = `$${menuItem.price}`;
+        menuItemCard.appendChild(itemPrice);
+
+        const itemImage = document.createElement("img");
+        itemImage.src = menuItem.img;
+        itemImage.alt = `${menuItem.name} image`;
+        menuItemCard.appendChild(itemImage);
+
+        menuCollectionPizza.appendChild(menuItemCard);
+      });
+    })
+    .catch((error) => console.error(error));
+};

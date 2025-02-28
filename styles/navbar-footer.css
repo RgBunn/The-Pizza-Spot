@@ -37,8 +37,10 @@ ul li a {
   height: 20px;
 }
 /* footer */
+
 .footer-container {
-  padding: 30px 30px 0;
+  padding: 30px;
+  text-align: center;
 }
 .footer-container {
   background-color: var(--black);

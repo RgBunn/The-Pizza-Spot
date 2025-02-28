@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
 /* font-family: "Fredericka the Great", serif; */
+:root {
+  --black: #1d2833;
+  --light-caramel: #e9c590;
+}
 * {
   margin: 0;
   padding: 0;
@@ -41,4 +45,10 @@ a {
 .price {
   font-weight: 700;
   font-size: 20px;
+}
+#admin-link {
+  color: #f7d1a3;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
