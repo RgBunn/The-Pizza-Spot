@@ -4,60 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/general-styles.css" />
-    <link rel="stylesheet" href="/styles/navbar-footer.css" />
-    <link rel="stylesheet" href="/styles/cart.css" />
+    <link rel="stylesheet" href="../styles/general-styles.css" />
+    <link rel="stylesheet" href="../styles/navbar-footer.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
   </head>
   <body>
-    <!-- <div class="cart__container"> -->
-    <nav class="navbar">
-      <div class="logo">pizza logo</div>
-      <div class="nav-items">
-        <ul>
-          <li><a href="/pages/index.html">Home</a></li>
-          <li><a href="/pages/menu.html">Menu</a></li>
-          <li><a href="#">Cart</a></li>
-        </ul>
-      </div>
-    </nav>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          The Pizza Spot
+          <img
+            src="../images/illustrations/pizza-logo.png"
+            aria-hidden="true"
+          />
+        </div>
+        <div class="nav-items">
+          <ul>
+            <li><a href="/pages/index.html">Home</a></li>
+            <li><a href="/pages/menu.html">Menu</a></li>
+            <li>
+              <a href="#"
+                ><img
+                  src="../images/icons/shopping-cart.png"
+                  aria-hidden="true"
+                  class="nav__icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <main>
       <section>
         <h1>Youre only few steps away</h1>
       </section>
       <section>
         <div class="cart__wrapper">
-          <div class="cart__item">
-            <div class="cart__item-product">
-              <img src="/images/mozzarella-pizza.jpg" aria-hidden="true" />
-              <div class="cart__item-details">
-                <h3>pizza name</h3>
-                <p>price</p>
-              </div>
-            </div>
-            <div class="cart__item-buttons">
-              <button>X</button>
-              <div class="add-remove-btns">
-                <button>-</button>
-                <span>0</span>
-                <button>+</button>
-              </div>
-            </div>
-          </div>
-          <div class="cart__item">
-            <div class="cart__item-product">
-              <img src="/images/mozzarella-pizza.jpg" aria-hidden="true" />
-              <div class="cart__item-details">
-                <h3>pizza name</h3>
-                <p>price</p>
-              </div>
-            </div>
-            <div class="cart__item-buttons">
-              <button>X</button>
-              <div class="add-remove-btns">
-                <button>-</button>
-                <span>0</span>
-                <button>+</button>
-              </div>
+          <div class="cart-item">
+            <span class="cart-item__name">Product Name</span>
+            <div class="cart-item__quantity">
+              <button class="cart-item__button cart-item__button--minus">
+                -
+              </button>
+              <span class="cart-item__amount">1</span>
+              <!-- Current amount -->
+              <button class="cart-item__button cart-item__button--plus">
+                +
+              </button>
             </div>
           </div>
         </div>
@@ -80,9 +73,30 @@
       <div class="footer-container">
         <div class="restaurants-info">
           <div class="contacts">
-            <p>address: 123 Some Random Street</p>
-            <p>phone: 123-456-789</p>
-            <p>email: thepizzaspot@delicious.com</p>
+            <p>
+              <img
+                src="../images/icons/location.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              123 Some Random Street
+            </p>
+            <p>
+              <img
+                src="../images/icons/telephone.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              123-456-789
+            </p>
+            <p>
+              <img
+                src="../images/icons/email.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              thepizzaspot@delicious.com
+            </p>
           </div>
           <div class="business-hours">
             <ul>

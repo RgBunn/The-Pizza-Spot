@@ -15,11 +15,29 @@ main {
   justify-content: center;
   align-items: center;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* main {
+  flex: 1; /
+  padding: 20px;
+}
+
 footer {
+  background-color: #1d2833;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+} */
+
+/* footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-}
+} */
 
 .update-menu-container {
   display: flex;

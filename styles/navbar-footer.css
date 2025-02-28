@@ -23,6 +23,10 @@
 .nav__icon {
   height: 30px;
 }
+.logo {
+  display: flex;
+  gap: 10px;
+}
 .logo,
 .nav-items ul li {
   display: flex;
