@@ -5,44 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../admin/admin.css" />
+    <link rel="stylesheet" href="../styles/general-styles.css" />
+    <link rel="stylesheet" href="../styles/navbar-footer.css" />
   </head>
   <body>
-    <script src="../admin/admin.js"></script>
     <div class="wrapper">
-        <header>
-            <div>logo</div>
-                <nav class="menu">
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about/about.html">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-        </header>
-        <main>
-            <button id="add-container">Add Item</button>
-            <button id="update-container">Edit Item</button>
-            <button id="delete-container">Delete Item</button>
-            <div class="menu-item">
+      <header>
+        <nav class="navbar">
+          <div class="logo">
+            The Pizza Spot
+            <img
+              src="/images/illustrations/pizza-logo.png"
+              aria-hidden="true"
+            />
+          </div>
+          <div class="nav-items">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="/pages/menu.html">Menu</a></li>
+              <li>
+                <a href="../pages/cart.html"
+                  ><img
+                    src="../images/icons/shopping-cart.png"
+                    aria-hidden="true"
+                    class="nav__icon"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="admin-container">
+          <button id="add-item" class="btn btn-dark">Add Item</button>
+          <button id="update-item" class="btn btn-dark">Edit Item</button>
+          <button id="delete-item" class="btn btn-dark">Delete Item</button>
+          <div class="menu-item">
+            <div class="add-menu-container">
+              <form
+                id="create-form"
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  width: 300px;
+                  gap: 5px;
+                "
+              >
+                <!-- <select name="category" id="category">
+                    <option value="pizza">Pizza</option>
+                    <option value="beverage">Beverage</option>
+                    <option value="appetizer">Appetizer</option>
+                    <option value="dessert">Dessert</option>
+                  </select> -->
+                <input
+                  type="text"
+                  id="product-name"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  type="number"
+                  id="product-price"
+                  placeholder="Price"
+                  required
+                />
+                <input
+                  type="text"
+                  id="product-image"
+                  placeholder="Image URL"
+                  required
+                />
+                <textarea
+                  id="product-description"
+                  placeholder="Description"
+                  required
+                ></textarea>
+                <button id="add-product" type="submit" class="btn btn-dark">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              commodi a reiciendis autem beatae tenetur, delectus quaerat nemo
+              blanditiis maiores necessitatibus iusto aspernatur officiis quasi
+              eos cupiditate, excepturi voluptatem molestiae laborum placeat
+              voluptas! Libero nihil blanditiis beatae sunt vitae reiciendis
+              tempore natus, quaerat dicta numquam recusandae exercitationem
+              voluptatum doloremque labore officiis quisquam placeat minus
+              consequuntur animi sint sapiente veritatis hic aut? Nisi maiores
+              eligendi pariatur excepturi saepe est consequatur repellendus sed
+              asperiores dolorem qui, libero iste sint adipisci harum at cum
+              necessitatibus obcaecati. Aut commodi, sint perferendis ex totam
+              non sequi laboriosam numquam molestias suscipit, voluptate debitis
+              dolorem neque iure velit culpa, quidem nihil repellat ullam magnam
+              hic ducimus adipisci quas. Fugiat voluptas ea delectus expedita
+              animi hic ipsum, dignissimos est laudantium, illum unde
+              repudiandae! Alias amet in quae quisquam commodi, dicta explicabo!
+              Fugiat temporibus, distinctio aut voluptas est animi
+              exercitationem, odit, excepturi ex dolores non! Eaque doloribus
+              inventore in, quae totam sequi consequuntur necessitatibus
+              temporibus dignissimos ipsam asperiores quod nulla ipsum vitae
+              repellendus odit dolores debitis, tempore, quas obcaecati! Debitis
+              nostrum itaque iusto libero excepturi odit quasi nisi ipsa! Sunt
+              perferendis repellendus dolor quis nulla nostrum tenetur corporis
+              nobis odit corrupti architecto commodi eius culpa rem ea quaerat
+              quasi, blanditiis velit vitae sit dolores sapiente? Voluptas
+              voluptatem, facilis hic, corrupti obcaecati temporibus ad velit,
+              magni a eaque dignissimos maxime unde! Neque voluptates nisi totam
+              quidem eligendi quos quas, eaque molestias vitae voluptas harum
+              pariatur accusantium quae atque dolor vel enim quibusdam fugit.
+              Ad, quis doloribus labore quia dolores, illum neque maiores, rem
+              aut architecto cumque incidunt. Maxime, rem, eum reprehenderit
+              nobis saepe necessitatibus quibusdam sint quas accusantium velit,
+              laudantium incidunt eveniet vero labore blanditiis ipsum nemo
+              doloremque tempora! Amet tenetur ipsum perferendis quam? Dolores,
+              voluptatum commodi deleniti esse, facilis, tempora minus
+              cupiditate sequi autem iste doloremque similique incidunt non
+              error ipsa voluptatibus officiis quos? Quae necessitatibus
+              consectetur ratione doloremque delectus odit voluptatum maiores
+              nemo sit in praesentium qui laborum velit saepe veritatis
+              similique culpa dicta totam quod accusantium magnam, dolore eum a?
+              Dignissimos aspernatur autem cupiditate deserunt minus veritatis,
+              quam, ratione obcaecati rem esse corporis et repellat magni id,
+              dolorum aut ducimus laudantium consequatur doloremque. Doloremque
+              molestias iste nemo iure officiis nesciunt adipisci asperiores
+              omnis iusto perferendis natus a, minus quam, distinctio tempora
+              enim accusantium odio illo veritatis aspernatur, possimus
+              explicabo! Voluptatem, quo, necessitatibus, aliquid eaque velit
+              nesciunt nam et qui praesentium ducimus reiciendis. Repellendus,
+              sint, voluptatibus ab, illum ullam nisi corporis alias sit rerum
+              eveniet quos? Itaque, magnam, sit laudantium neque rerum beatae
+              recusandae amet repellendus sunt dolores dignissimos officia
+              dolorum reiciendis nihil explicabo nisi blanditiis provident cum
+              et officiis culpa, unde molestias esse. Nisi officiis soluta qui
+              in dolor architecto eveniet ab consectetur quos aut aperiam eius
+              id, adipisci totam obcaecati at mollitia vel perferendis deserunt
+              laborum! Placeat exercitationem magnam voluptates dolorum, itaque
+              culpa, animi aliquam recusandae veniam cumque nemo consequatur
+              quae molestias, ut soluta inventore doloremque maiores!
+              Perferendis unde velit earum esse at temporibus quos non
+              consequatur, corrupti repellat odio amet nulla aliquam tempora
+              placeat. Esse.
+            </p>
+          </div>
 
-                <div class="add-pizza">
-                    <form id="create-form" style="display: flex; flex-direction: column;width: 300px; gap: 5px;">
-                        <select name="" id=""></select>
-                        <input type="text" id="name" placeholder="Name" required />
-                        <input type="number" id="price" placeholder="Price" required />
-                        <input type="text" id="img" placeholder="Image URL" required />
-                        <textarea id="description" placeholder="Description" required></textarea>
-                        <button id="add" type="submit">Submit</button>
-                    </form>
-                </div>
-
-                <div class="update-pizza">
-                    <div>
-                        <h3>Редактирование пиццы</h3>
-                    </div>
-                </div>
-                <div class="delete-pizza">delete</div>
-
+          <div class="update-menu-container"></div>
+          <div class="delete-menu-container">
+            <!-- <p>delete menu item</p> -->
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="restaurants-info">
+          <div class="contacts">
+            <p>
+              <img
+                src="../images/icons/location.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              123 Some Random Street
+            </p>
+            <p>
+              <img
+                src="../images/icons/telephone.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              123-456-789
+            </p>
+            <p>
+              <img
+                src="../images/icons/email.png"
+                aria-hidden="true"
+                class="footer__icon"
+              />
+              thepizzaspot@delicious.com
+            </p>
+          </div>
+          <div class="business-hours">
+            <ul>
+              <li>Tuesday-Thursday: 11:00-22:00</li>
+              <li>Friday-Sunday: 11:30-00:00</li>
+              <li>Monday: closed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyrights">
+          <h3>© 2025 The Pizza Spot. All Rights Reserved.</h3>
+        </div>
+        <a href="../admin/index.html" id="admin-link"
+          ><span
+            ><img
+              src="../images/icons/chef.png"
+              aria-hidden="true"
+              class="footer__icon" /></span
+          >Admin</a
+        >
+      </div>
+    </footer>
+    <script src="../admin/admin.js"></script>
   </body>
 </html>
