@@ -82,6 +82,7 @@ if (storageCartItems.length > 0) {
         ".payment-success-container"
       );
       const pizzaTruck = document.getElementById("pizza-truck");
+      const honkSound = document.getElementById("honk-sound");
       // delete items from cart
       localStorage.removeItem("cart");
       cartItemContainer.innerHTML = "";
@@ -93,6 +94,7 @@ if (storageCartItems.length > 0) {
       // pizza truck animation
       setTimeout(() => {
         pizzaTruck.style.animation = "drivePizzaTruck 4s linear forwards";
+        honkSound.play();
 
         // Drop a pizza box every second
         let dropInterval = setInterval(() => {

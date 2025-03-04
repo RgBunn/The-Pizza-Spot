@@ -4,11 +4,18 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+.menu-header {
+  font-family: "Fredericka the Great", serif;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 30px;
+}
 .menu__collection {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  padding: 20px;
 }
 .menu-item {
   background: linear-gradient(to bottom right, #f8f1e5, #f7d1a3);
@@ -17,11 +24,9 @@ body {
   display: flex;
   width: 400px;
   height: 250px;
-  border: 3px solid orange;
 }
 .menu-item__img-container {
   width: 300px;
-  border: 3px solid rgb(255, 0, 0);
 }
 .menu-item__img-container img {
   width: 100%;
@@ -29,26 +34,141 @@ body {
   object-fit: cover;
 }
 .menu-item__description {
-  border: 3px solid rgb(55, 0, 255);
   width: 100%;
   padding: 20px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.menu-item__details {
-  border: 3px solid rgb(0, 255, 47);
+.menu-item__details h3 {
+  font-family: "Fredericka the Great", serif;
+  letter-spacing: 1px;
 }
+
 .menu-item__price-button {
-  border: 3px solid rgb(255, 0, 255);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .menu-item__price-button span {
+  font-family: "Fredericka the Great", serif;
   font-weight: bold;
   font-size: 20px;
 }
-.add-to-cart {
-  border: 2px solid white;
+.menu-section__hero {
+  color: bisque;
+  text-align: center;
+}
+.menu-section__hero h1 {
+  font-size: 45px;
+  font-family: "Fredericka the Great", serif;
+}
+.menu-section__hero p {
+  font-size: 18px;
+}
+/* menu page animation */
+.animation_section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 450px;
+  background-image: url(../images/illustrations/illustration_menu_bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.pizza-with-smoke {
+  margin-top: 80px;
+  max-width: 600px;
+  position: relative;
+  height: 450px;
+  border-radius: 20px;
+}
+.pizza-with-smoke img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+.vapour {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+
+  /*  */
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.left {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+
+  top: 35%;
+  left: 30%;
+  transform: translateX(-50%);
+}
+.right {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+
+  top: 35%;
+  left: 75%;
+  transform: translateX(-50%);
+}
+.vapour span {
+  position: relative;
+  width: 0.5vw;
+  height: 8vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  filter: blur(5px);
+  animation: animate 5s linear infinite;
+  opacity: 0;
+  animation-delay: calc(var(--i) * -0.3s);
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+    transform: translateY(-150px) scaleX(5);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-300px) scaleX(10);
+  }
+}
+/* media queries */
+@media screen and (max-width: 768px) {
+  .animation_section {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-section__hero {
+    margin-top: 20px;
+  }
+  .menu-section__hero h1 {
+    font-size: 30px;
+  }
+  .pizza-with-smoke {
+    margin-top: 10px;
+    max-width: 350px;
+    position: relative;
+    height: 450px;
+  }
 }
