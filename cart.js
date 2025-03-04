@@ -2,7 +2,15 @@
 const itemsInCart = document.querySelector(".cart-count");
 const cartContainer = document.querySelector(".cart__container");
 const totalToPay = document.querySelector("#total-amount");
+const totalToPayContainer = document.querySelector(".total-container");
+const emptyCartContainer = document.querySelector(".cart__empty");
+const btnCheckout = document.querySelector("#btn-checkout");
+const bill = document.querySelector("#bill");
+const paymentWindow = document.querySelector(".payment-window");
+const goBackBtn = document.querySelector("#go-back");
+const payNowBtn = document.querySelector("#pay-now");
 
+paymentWindow.style.display = "none";
 // Get the cart items stored in localStorage
 const storageCartItems = JSON.parse(localStorage.getItem("cart")) || [];
 // show amount of items on icon
@@ -17,25 +25,31 @@ if (storageCartItems.length > 0) {
 
     const productImageContainer = document.createElement("div");
     const productImg = document.createElement("img");
-    // productImg.src = item.image;
+    productImg.src = item.image;
 
     const itemDetailsContainer = document.createElement("div");
+    itemDetailsContainer.classList.add("item-details");
     const itemName = document.createElement("h3");
     itemName.textContent = item.name;
     const itemPrice = document.createElement("p");
     itemPrice.textContent = `$${item.price}`;
     const buttonsContainer = document.createElement("div");
+    buttonsContainer.classList.add("buttons-container");
     const closeButton = document.createElement("button");
-    closeButton.textContent = "X";
+    closeButton.classList.add("btn-close");
+    // closeButton.textContent = "X";
     const controlButtons = document.createElement("div");
+    controlButtons.classList.add("control-btns");
     // control btns
     const btnRemove = document.createElement("button");
+    btnRemove.classList.add("btn-circle");
     btnRemove.textContent = "-";
     const amountOfItems = document.createElement("span");
     amountOfItems.classList.add("item-quantity");
     amountOfItems.textContent = "1";
 
     const btnAdd = document.createElement("button");
+    btnAdd.classList.add("btn-circle");
     btnAdd.textContent = "+";
 
     cartContainer.append(cartItemContainer);
@@ -48,7 +62,62 @@ if (storageCartItems.length > 0) {
     itemDetailsContainer.append(itemName, itemPrice);
     controlButtons.append(btnRemove, amountOfItems, btnAdd);
     buttonsContainer.append(closeButton, controlButtons);
+    // check later whats the best solution
 
+    btnCheckout.onclick = () => {
+      paymentWindow.style.display = "block";
+      totalToPayContainer.style.display = "none";
+      // cartItemContainer.style.display = "none";
+      document.querySelectorAll(".cart-item").forEach((item) => {
+        item.style.display = "none";
+      });
+    };
+    goBackBtn.onclick = () => {
+      paymentWindow.style.display = "none";
+      totalToPayContainer.style.display = "flex";
+      cartItemContainer.style.display = "flex";
+    };
+    payNowBtn.onclick = () => {
+      const paymentSuccessContainer = document.querySelector(
+        ".payment-success-container"
+      );
+      const pizzaTruck = document.getElementById("pizza-truck");
+      const honkSound = document.getElementById("honk-sound");
+      // delete items from cart
+      localStorage.removeItem("cart");
+      cartItemContainer.innerHTML = "";
+      itemsInCart.textContent = "0";
+
+      paymentWindow.style.display = "none";
+      paymentSuccessContainer.style.display = "flex";
+
+      // pizza truck animation
+      setTimeout(() => {
+        pizzaTruck.style.animation = "drivePizzaTruck 4s linear forwards";
+        honkSound.play();
+
+        // Drop a pizza box every second
+        let dropInterval = setInterval(() => {
+          let pizzaBox = document.createElement("div");
+          pizzaBox.classList.add("pizza-box");
+          pizzaTruck.appendChild(pizzaBox);
+          pizzaBox.style.animation = "dropPizzaBox 1.5s ease-out forwards";
+
+          setTimeout(() => {
+            pizzaBox.remove();
+          }, 1500);
+        }, 1000);
+
+        setTimeout(() => {
+          clearInterval(dropInterval);
+        }, 4000);
+      }, 500);
+
+      setTimeout(() => {
+        paymentSuccessContainer.style.display = "none";
+        emptyCartContainer.style.display = "block";
+      }, 4500);
+    };
     //
     btnRemove.onclick = () => {
       if (parseInt(amountOfItems.textContent) > 0) {
@@ -81,9 +150,11 @@ if (storageCartItems.length > 0) {
         itemsInCart.textContent = storageCartItems.length;
       }
     };
+    emptyCartContainer.style.display = "none";
   });
   calcTotal();
 } else {
+  totalToPayContainer.style.display = "none";
   console.log("No items in the cart.");
 }
 
@@ -105,4 +176,5 @@ function calcTotal() {
 
   // Update total amount display
   totalToPay.textContent = `$${total.toFixed(2)}`;
+  bill.textContent = `$${total.toFixed(2)}`;
 }

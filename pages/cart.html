@@ -36,38 +36,58 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section>
-        <h1>Youre only few steps away</h1>
-      </section>
-      <section>
-        <div class="cart__container">
-          <!-- <div class="cart-item">
-            <span class="cart-item__name">Product Name</span>
-            <div class="cart-item__quantity">
-              <button class="cart-item__button--minus" id="remove-items">
-                -
-              </button>
-              <span class="cart-item__amount" id="items-amount">1</span>
-              <button class="cart-item__button--plus" id="add-items">+</button>
+    <div class="cart__wrapper">
+      <main>
+        <section>
+          <!-- <h1>Youre only few steps away</h1> -->
+        </section>
+        <section>
+          <div class="cart__container"></div>
+        </section>
+        <section>
+          <div class="cart__totals">
+            <!-- <div class="sub-total">
+              <p>Sub-total</p>
+              <span>$0.00</span>
+            </div> -->
+
+            <div class="total-container">
+              <div class="total-text">
+                <span>Total:</span>
+                <span id="total-amount"></span>
+              </div>
+              <button class="btn btn-light" id="btn-checkout">Checkout</button>
             </div>
-          </div> -->
-        </div>
-      </section>
-      <section>
-        <div class="cart__totals">
-          <!-- <div class="sub-total">
-            <p>Sub-total</p>
-            <span>$0.00</span>
-          </div> -->
-          <hr />
-          <div class="total">
-            <p>Total</p>
-            <span id="total-amount">$0.00</span>
           </div>
+        </section>
+      </main>
+    </div>
+    <div class="cart__empty">
+      <h2>Your cart is empty at the moment</h2>
+      <a href="../pages/menu.html" class="btn btn-light">Browse pizzas</a>
+    </div>
+    <div class="payment-window">
+      <h3 class="bill">Your bill is: <span id="bill"></span></h3>
+      <button class="btn btn-light" id="go-back">Go Back</button>
+      <button class="btn btn-light" id="pay-now">Pay Now</button>
+    </div>
+    <div class="payment-success-container">
+      <div class="payment-flex-container">
+        <div class="success-text">
+          <h2>Payment succesful!</h2>
+          <p>We are making your pizza right now</p>
         </div>
-      </section>
-    </main>
+        <div class="success-image"></div>
+      </div>
+      <div class="pizza-truck-wrapper">
+        <div id="pizza-truck">
+          <div class="pizza-box"></div>
+        </div>
+        <audio id="honk-sound">
+          <source src="../sounds/horn-honk.mp3" />
+        </audio>
+      </div>
+    </div>
     <footer>
       <div class="footer-container">
         <div class="restaurants-info">

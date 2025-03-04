@@ -1,23 +1,249 @@
 body {
   min-height: 100vh;
-  position: relative;
-}
-.cart__item {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  border: 1px solid blue;
+  /* position: relative; */
 }
-.cart__item-product {
+.cart__wrapper {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid orange; */
+}
+.cart__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* border: 1px solid orangered; */
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 20px;
+  border-radius: 15px;
+  padding: 15px;
+  /* border: 2px solid blue; */
+  background: linear-gradient(to bottom right, #f8f1e5, #f7d1a3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+.cart-item img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item-details p {
+  font-size: 20px;
+  font-family: "Fredericka the Great", serif;
+}
+.buttons-container {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
-.cart__item img {
-  height: 50px;
+.control-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-/* attaching footer to the bottom of the page */
+.item-quantity {
+  font-family: "Fredericka the Great", serif;
+  font-size: 20px;
+}
+.btn-circle {
+  background-color: #1d2833;
+  color: #e9c590;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+}
+.btn-close {
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+  background-image: url(../images/icons/close.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
-footer {
+.total-container {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  border-radius: 20px;
+  color: #e9c590;
+  background: linear-gradient(to bottom right, #1d2833, #16222a, #3a6073);
+  opacity: 0.9;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+.total-container span {
+  font-family: "Fredericka the Great", serif;
+  margin-right: 10px;
+  font-size: 25px;
+}
+/* styling empty cart */
+.cart__empty {
+  background-image: url(../images/illustrations/illustration_for-empty-cart.jpg);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: #e9c590;
+}
+.cart__empty h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.payment-window {
+  background-image: url(../images/illustrations/illustration_toPay.jpg);
+  width: 80%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: #e9c590;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.payment-window h3 {
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.payment-success-container {
+  background: linear-gradient(to bottom right, #f8f1e5, #f7d1a3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  display: none;
+  overflow: hidden;
+}
+.payment-flex-container {
+  display: flex;
+  height: 300px;
+  position: relative;
+}
+.success-text {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.success-image {
+  background-image: url(../images/illustrations/illustration_chef-and-pizza.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.success-image img {
+  max-width: 100%;
+  object-fit: cover;
+}
+/* pizza truck animation */
+
+.pizza-truck-wrapper {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+#pizza-truck {
+  width: 120px;
+  height: 80px;
+  background-image: url("../images/illustrations/pizza-truck.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  left: -150px;
+  animation: drivePizzaTruck 4s linear forwards;
+}
+.pizza-box {
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/illustrations/pizza-box.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  opacity: 1;
+  animation: dropPizzaBox 4s ease-in-out infinite;
+}
+@keyframes drivePizzaTruck {
+  0% {
+    left: -150px;
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    left: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes dropPizzaBox {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30%) rotate(-10deg);
+  }
+  20% {
+    opacity: 0.2;
+    transform: translateX(-120%) translateY(-40%) rotate(10deg);
+  }
+  40% {
+    opacity: 0.6;
+    transform: translateX(-200%) translateY(-20%) rotate(-10deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-300%) translateY(0) rotate(10deg);
+  }
+  80% {
+    transform: translateX(-450%) translateY(20px) rotate(-15deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-500%) translateY(40px) rotate(-30deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .payment-flex-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
 }
