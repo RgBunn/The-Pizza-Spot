@@ -4,6 +4,9 @@
 :root {
   --black: #1d2833;
   --light-caramel: #e9c590;
+  --light-apricot: #f7d1a3;
+  --ff-fredericka: "Fredericka the Great", serif;
+  --gradient-light: linear-gradient(to bottom right, #f8f1e5, #f7d1a3);
 }
 * {
   margin: 0;
@@ -22,6 +25,7 @@ a {
 /* styling headings */
 .section-heading {
   text-align: center;
+  margin: 40px auto 15px;
 }
 
 /* styling buttons */
@@ -35,11 +39,12 @@ a {
   color: var(--light-caramel);
 }
 .btn-light {
-  background: linear-gradient(to bottom right, #f8f1e5, #f7d1a3);
-  color: black;
+  background: var(--gradient-light);
+  color: var(--black);
 }
 .btn:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
 .price {
@@ -47,7 +52,7 @@ a {
   font-size: 20px;
 }
 #admin-link {
-  color: #f7d1a3;
+  color: var(--light-apricot);
   display: flex;
   justify-content: center;
   gap: 10px;

@@ -146,6 +146,7 @@ function showDeleteContainer() {
         name.innerText = menuItem.name;
         const btn = document.createElement("button");
         btn.textContent = "Delete";
+        btn.classList.add("btn", "btn-dark");
 
         btn.onclick = (event) => {
           event.preventDefault();

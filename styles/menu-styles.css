@@ -172,3 +172,16 @@ body {
     height: 450px;
   }
 }
+@media screen and (max-width: 375px) {
+  .menu__collection {
+    padding: 5px;
+  }
+  .menu-item {
+    border-radius: 10px;
+
+    height: 300px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
