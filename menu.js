@@ -53,7 +53,7 @@ window.onload = async () => {
         addToCartBtn.textContent = "Add to cart";
         products.forEach((product) => {
           if (product.id === menuItem.id) {
-            addToCartBtn.textContent = "In Cart";
+            addToCartBtn.textContent = "In Cart Already";
           }
         });
 
@@ -94,7 +94,7 @@ window.onload = async () => {
           // Save the updated cart to local storage
           localStorage.setItem("cart", JSON.stringify(cart));
           itemsInCart.innerText = cart.length;
-          addToCartBtn.textContent = "in cart already";
+          addToCartBtn.textContent = "In Cart Already";
           // Optionally, show a message or update the UI to reflect the cart change
           console.log(`Item added to cart: ${menuItem.name}`);
           // /////////////

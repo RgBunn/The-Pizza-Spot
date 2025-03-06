@@ -24,87 +24,9 @@
     transform: translateY(0);
   }
 }
-
-/* sliding pizza illustration */
-.hero__animation-wrapper {
-  border: 3px solid green;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.hero__animation-wrapper img {
-  max-width: 100%;
-  transition: transform 1s ease-in-out;
-}
-#pizza-board {
-  z-index: 0;
-  position: absolute;
-
-  transform: translate(-50%, -50%);
-  animation: slideBoard 2s ease forwards;
-}
-#sliding-pizza {
-  z-index: 1;
-  position: absolute;
-  left: -250px;
-  transform: translateY(-10%);
-  animation: slidePizza 2s ease-out forwards;
-}
-@keyframes slidePizza {
-  0% {
-    opacity: 0;
-    transform: translateY(-400px);
-  }
-  10% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(3px) translateX(240px) rotate(80deg);
-  }
-}
-@keyframes slideBoard {
-  0% {
-    opacity: 0;
-    transform: translateX(400px) translateY(300px) rotate(0deg);
-  }
-  20% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) rotate(60deg);
-  }
-}
-
-/* Mobile-first adjustments */
+/* media queries */
 @media (max-width: 768px) {
   #pizza-spot-heading {
-    font-size: 3rem;
-  }
-  .hero-section {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-size: 4rem;
   }
 }

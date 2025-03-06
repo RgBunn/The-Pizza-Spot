@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Pizza Spot</title>
     <link rel="stylesheet" href="../styles/general-styles.css" />
-    <link rel="stylesheet" href="../styles/navbar-footer.css" />
     <link rel="stylesheet" href="../styles/landing-page.css" />
+    <link rel="stylesheet" href="../styles/navbar-footer.css" />
     <link rel="stylesheet" href="../styles/animations.css" />
   </head>
   <body>
@@ -44,27 +44,12 @@
               <span>The</span> <span>pizza</span> <span>spot</span>
             </h1>
           </div>
-          <!-- <div class="hero__animation">
-            <div class="hero__animation-wrapper">
-              <img
-                src="/images/illustrations/hero_animation-pizza-board.png"
-                aria-hidden="true"
-                id="pizza-board"
-              />
-              <img
-                src="/images/illustrations/hero_animation-pizza.png"
-                aria-hidden="true"
-                id="sliding-pizza"
-              />
-            </div>
-          </div> -->
         </div>
       </section>
       <section>
         <div class="introduction">
-          <!-- <div class="introduction__image"></div> -->
           <div class="introduction__text">
-            <h2 class="section-heading">
+            <h2>
               Welcome to The Pizza Spot – Where Every Slice is Crafted to
               Perfection!
             </h2>
@@ -81,95 +66,137 @@
         </div>
       </section>
       <section>
-        <h2 class="section-heading">Check out our best sellers</h2>
-        <div id="best-sellers">
-          <!-- <div class="best-seller__card">
-            <div class="best-seller__product-image">img</div>
-            div.best-seller__text-content
-          <h3>Chicken BBQ</h3>
+        <div class="carousel__section">
+          <h2 class="section-heading">
+            Swipe & Explore: From Naples to New York: Pizza’s Global Journey
+          </h2>
+          <h3 class="section-heading">
+            A Slice of History: Explore Pizza Styles
+          </h3>
           <p>
-            A flavor-packed favorite! Tender grilled chicken, crispy bacon, and
-            tangy barbecue sauce come together on a perfectly baked crust,
-            topped with melted cheese.
+            Pizza is universal, but every region makes it differently! Swipe
+            through and discover your next favorite pizza style.
           </p>
-          <button>Order now</button>
-        </div>
-         -->
+          <div class="carousel">
+            <div class="image-container" id="images">
+              <div class="slide">
+                <img
+                  src="../images/illustrations/illustration_neapolitan-style-pizza.jpg"
+                  alt="Neapolitan-pizza"
+                />
+                <p>
+                  Neapolitan – Thin, soft, and chewy crust with simple toppings
+                  (tomato, mozzarella, basil).
+                </p>
+              </div>
+              <div class="slide">
+                <img
+                  src="../images/illustrations/illustration_sicillian-style-pizza.jpg"
+                  alt="Sicilian-pizza"
+                />
+                <p>
+                  Sicilian – Thick, fluffy, rectangular, with a crispy bottom.
+                </p>
+              </div>
+              <div class="slide">
+                <img
+                  src="../images/illustrations/illustration_new-york-style-pizza.webp"
+                  alt="New-York-pizza"
+                />
+                <p>
+                  New York-Style – Large, thin, foldable slices with a chewy
+                  crust.
+                </p>
+              </div>
+              <div class="slide">
+                <img
+                  src="../images/illustrations/illustration_chicago-deep-dish-pizza.jpg"
+                  alt="Chicago-deep-dish-pizza"
+                />
+                <p>
+                  Chicago Deep Dish – Thick, buttery crust with layers of
+                  cheese, toppings, and chunky tomato sauce on top.
+                </p>
+              </div>
+              <div class="slide">
+                <img
+                  src="../images/illustrations/illustration_calzone-style-pizza.jpg"
+                  alt="Calzone-style-pizza"
+                />
+                <p>Calzone – A folded, stuffed pizza.</p>
+              </div>
+            </div>
+            <div class="carousel-buttons">
+              <button id="previous" class="btn btn-light btns-icon">
+                <img src="../images/icons/back.png" aria-hidden="true" />
+              </button>
+              <button id="next" class="btn btn-light btns-icon">
+                <img src="../images/icons/next.png" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
         </div>
       </section>
+
       <section>
-        <h2>How It Works?</h2>
-        <div class="process">
-          <div class="process__block">
-            <div class="process__block-text"><h4>1. Browse Our Menu</h4></div>
-            <div class="process__block-illustration">
-              <img
-                src="../images/illustrations/illustration_browse.jpg"
-                aria-hidden="true"
-              />
-            </div>
-          </div>
-          <div class="process__block">
-            <div class="process__block-text"><h4>2. Choose Your Pizza</h4></div>
-            <div class="process__block-illustration">
-              <img
-                src="../images/illustrations/illustration_choose.jpg"
-                aria-hidden="true"
-              />
-            </div>
-          </div>
-          <div class="process__block">
-            <div class="process__block-text">
-              <h4>3. Get It Delivered</h4>
-            </div>
-            <div class="process__block-illustration">
-              <img
-                src="../images/illustrations/illustration_delivered.jpg"
-                aria-hidden="true"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h2>Why Choose Us?</h2>
+        <h2 class="section-heading">Why Choose Us?</h2>
+
         <div class="why-us__container">
-          <ul class="why-us">
-            <li>
-              <span
-                ><img
-                  src="../images/icons/pizza-delivery.png"
-                  aria-hidden="true" /></span
-              >Fast Delivery
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/icons/ingredient.png"
-                  aria-hidden="true" /></span
-              >Fresh Ingredients
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/icons/cook-book.png"
-                  aria-hidden="true" /></span
-              >Family Recipes
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/icons/funding.png"
-                  aria-hidden="true" /></span
-              >Deliciously Affordable
-            </li>
-          </ul>
+          <div class="single-card" id="wood-fire_pizza">
+            <div class="why-us__text-content dark">
+              <h5>Wood-Fired Perfection</h5>
+              <p>
+                Our pizzas are baked in traditional wood-fired ovens for that
+                perfect crispy crust and smoky flavor!
+              </p>
+            </div>
+          </div>
+          <div class="double-card" id="fast-delivery">
+            <div class="double-card__content-container">
+              <div class="why-us__text-content">
+                <h5>Fast & Hot Delivery</h5>
+                <p>
+                  Your pizza arrives fresh and piping hot in 30 minutes or less!
+                </p>
+              </div>
+            </div>
+            <div class="double-card__img-container">
+              <img
+                src="../images/illustrations/illustration_fast-delivery.jpg"
+                alt="Pizza delivery man holding pizza"
+              />
+            </div>
+          </div>
+          <div class="double-card" id="fresh-ingredients">
+            <div class="double-card__img-container">
+              <img
+                src="../images/illustrations/illustration_fresh-ingredients.jpg"
+                alt="Vegetables and other ingredients on the table"
+              />
+            </div>
+            <div class="double-card__content-container">
+              <h5>Premium, Fresh Ingredients</h5>
+              <p>
+                We use only the freshest ingredients, from hand-picked veggies
+                to premium meats and cheeses.
+              </p>
+            </div>
+          </div>
+          <div class="single-card" id="hand-made_pizza">
+            <div class="why-us__text-content light">
+              <h5>Handmade with Love</h5>
+              <p>
+                Every pizza is crafted by expert chefs with a passion for great
+                taste.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section>
         <div class="cta__container">
-          <h3 class="section-heading">“Get Your Pizza Delivered”</h3>
-          <button class="btn btn-dark">Order Now</button>
+          <h3 class="section-heading">Get Your Pizza Delivered</h3>
+          <a href="../pages/menu.html" class="btn btn-light">Order Now</a>
         </div>
       </section>
     </main>
@@ -183,7 +210,7 @@
                 aria-hidden="true"
                 class="footer__icon"
               />
-              123 Some Random Street
+              123 Pizza Street
             </p>
             <p>
               <img
@@ -210,9 +237,7 @@
             </ul>
           </div>
         </div>
-        <div class="copyrights">
-          <h3>© 2025 The Pizza Spot. All Rights Reserved.</h3>
-        </div>
+
         <a href="../admin/index.html" id="admin-link"
           ><span
             ><img
@@ -221,6 +246,9 @@
               class="footer__icon" /></span
           >Admin</a
         >
+        <div class="copyrights">
+          <h5>© 2025 Created by Regina Kiseleva.</h5>
+        </div>
       </div>
     </footer>
     <script src="../landing.js"></script>

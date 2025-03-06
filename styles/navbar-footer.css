@@ -1,7 +1,3 @@
-:root {
-  --black: #1d2833;
-  --light-caramel: #e9c590;
-}
 /* nav bar */
 .navbar {
   display: flex;
@@ -11,7 +7,6 @@
   color: var(--light-caramel);
   padding: 15px 20px;
   position: relative; /* Add this  to display the shadow*/
-  /* box-shadow: 10px 10px 10px #e9c590; */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 10px 30px rgba(255, 140, 0, 0.4),
     0 5px 15px rgba(255, 99, 71, 0.35), 0 0 40px rgba(255, 165, 0, 0.2);
 }
@@ -66,4 +61,29 @@ ul li a {
 /* icons */
 .footer__icon {
   height: 20px;
+}
+#admin-link {
+  margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    display: flex;
+    gap: 3px;
+  }
+  .nav-items ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .navbar {
+    font-size: 15px;
+    gap: 10px;
+
+    padding: 10px 15px;
+  }
+  .restaurants-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -51,12 +51,6 @@
                   gap: 5px;
                 "
               >
-                <!-- <select name="category" id="category">
-                    <option value="pizza">Pizza</option>
-                    <option value="beverage">Beverage</option>
-                    <option value="appetizer">Appetizer</option>
-                    <option value="dessert">Dessert</option>
-                  </select> -->
                 <input
                   type="text"
                   id="product-name"
@@ -79,6 +73,7 @@
                   id="product-description"
                   placeholder="Description"
                   required
+                  maxlength="165"
                 ></textarea>
                 <button id="add-product" type="submit" class="btn btn-dark">
                   Submit
@@ -88,9 +83,7 @@
           </div>
 
           <div class="update-menu-container"></div>
-          <div class="delete-menu-container">
-            <!-- <p>delete menu item</p> -->
-          </div>
+          <div class="delete-menu-container"></div>
         </div>
       </main>
     </div>
@@ -104,7 +97,7 @@
                 aria-hidden="true"
                 class="footer__icon"
               />
-              123 Some Random Street
+              123 Pizza Street
             </p>
             <p>
               <img

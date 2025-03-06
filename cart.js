@@ -114,19 +114,22 @@ if (storageCartItems.length > 0) {
       }, 500);
 
       setTimeout(() => {
-        paymentSuccessContainer.style.display = "none";
-        emptyCartContainer.style.display = "block";
+        window.location.href = "/pages/menu.html";
       }, 4500);
     };
     //
     btnRemove.onclick = () => {
-      if (parseInt(amountOfItems.textContent) > 0) {
+      if (parseInt(amountOfItems.textContent) > 1) {
         amountOfItems.textContent = parseInt(amountOfItems.textContent) - 1;
+        btnRemove.style.display = "block";
         calcTotal();
       }
+      btnRemove.style.display =
+        parseInt(amountOfItems.textContent) === 1 ? "none" : "block";
     };
     btnAdd.onclick = () => {
       amountOfItems.textContent = parseInt(amountOfItems.textContent) + 1;
+      btnRemove.style.display = "block";
       calcTotal();
     };
     closeButton.onclick = () => {
