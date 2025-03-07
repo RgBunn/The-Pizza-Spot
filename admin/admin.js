@@ -18,7 +18,6 @@ const deleteMenuContainer = document.querySelector(".delete-menu-container");
 btnAddProduct.onclick = (event) => {
   event.preventDefault();
   const menuItem = {
-    // category: menuCategory.value,
     name: productName.value,
     price: productPrice.value,
     img: productImage.value,
@@ -28,7 +27,6 @@ btnAddProduct.onclick = (event) => {
 };
 
 function addMenuItem(menuItem) {
-  // ${menuItem.category}
   fetch(`${API_URL}/menu.json`, {
     method: "POST",
     headers: {
@@ -94,6 +92,7 @@ function showUpdateContainer() {
         description.value = menuItem.description;
         const btn = document.createElement("button");
         btn.textContent = "Update";
+        btn.classList.add("btn", "btn-dark");
 
         btn.onclick = (event) => {
           event.preventDefault();

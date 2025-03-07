@@ -66,7 +66,6 @@ window.onload = async () => {
 
         menuCollectionPizza.appendChild(menuItemCardContainer);
 
-        // //////////////
         // Add event listener for Add to Cart button
         addToCartBtn.addEventListener("click", () => {
           // Get cart data from local storage or initialize an empty array if none exists
@@ -95,9 +94,6 @@ window.onload = async () => {
           localStorage.setItem("cart", JSON.stringify(cart));
           itemsInCart.innerText = cart.length;
           addToCartBtn.textContent = "In Cart Already";
-          // Optionally, show a message or update the UI to reflect the cart change
-          console.log(`Item added to cart: ${menuItem.name}`);
-          // /////////////
         });
       });
     });

@@ -62,12 +62,10 @@ if (storageCartItems.length > 0) {
     itemDetailsContainer.append(itemName, itemPrice);
     controlButtons.append(btnRemove, amountOfItems, btnAdd);
     buttonsContainer.append(closeButton, controlButtons);
-    // check later whats the best solution
 
     btnCheckout.onclick = () => {
       paymentWindow.style.display = "block";
       totalToPayContainer.style.display = "none";
-      // cartItemContainer.style.display = "none";
       document.querySelectorAll(".cart-item").forEach((item) => {
         item.style.display = "none";
       });
@@ -117,7 +115,7 @@ if (storageCartItems.length > 0) {
         window.location.href = "/pages/menu.html";
       }, 4500);
     };
-    //
+
     btnRemove.onclick = () => {
       if (parseInt(amountOfItems.textContent) > 1) {
         amountOfItems.textContent = parseInt(amountOfItems.textContent) - 1;
@@ -162,8 +160,6 @@ if (storageCartItems.length > 0) {
 }
 
 // totals
-
-console.log(storageCartItems); // This should show an array of objects
 
 function calcTotal() {
   let total = 0;

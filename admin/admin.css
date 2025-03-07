@@ -20,24 +20,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-/* main {
-  flex: 1; /
-  padding: 20px;
-}
-
-footer {
-  background-color: #1d2833;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-} */
-
-/* footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-} */
 
 .admin-container {
   display: flex;
@@ -55,6 +37,4 @@ footer {
 .edit-form__styles {
   display: flex;
   flex-direction: column;
-  color: red;
-  background-color: blue;
 }

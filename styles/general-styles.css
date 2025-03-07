@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
-/* font-family: "Fredericka the Great", serif; */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
 :root {
   --black: #1d2833;
   --light-caramel: #e9c590;
   --light-apricot: #f7d1a3;
   --ff-fredericka: "Fredericka the Great", serif;
+  --ff-lora: "Lora", serif;
   --gradient-light: linear-gradient(to bottom right, #f8f1e5, #f7d1a3);
 }
 * {
@@ -15,6 +17,7 @@
 }
 body {
   background-color: hsla(33, 100%, 88%, 0.5);
+  font-family: var(--ff-lora);
 }
 li {
   list-style-type: none;

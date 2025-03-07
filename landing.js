@@ -39,6 +39,5 @@ btnNext.onclick = () => {
   } else {
     currentIndex = 0;
   }
-
   showImage();
 };
